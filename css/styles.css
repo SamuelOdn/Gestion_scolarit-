@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;0,700;1,300&family=Montserrat+Alternates&family=Playfair+Display+SC&family=Playfair+Display:ital,wght@0,600;1,400&family=Roboto+Slab:wght@100&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+    "sidebar header header header" 
+    "sidebar main main main" ;
+    height: 100vh;
+    
+}
+
+.header{
+    grid-area: header;
+    height: 70px;
+    background-color: white;
+    border-bottom: 5px solid #4f46e5;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+.header .header-right .one{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+
+}
+
+.header .header-right .one ul{
+
+    right: 28px;
+    position: absolute;
+    top: 50px;
+    list-style-type: none;
+    width: 200px;
+    background: #caced4;
+    border-radius: 4px;
+    padding: 15px;
+    display: none;
+
+}
+
+.header .header-right .one ul a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Cormorant', serif;
+    font-size: large;
+
+}
+
+.header .header-right .one ul li:hover {
+    padding: 4px 4px 4px 4px ;
+    cursor: pointer; 
+    
+}
+
+.header .header-right .one li:hover >ul {
+    display: initial; 
+    
+}
+
+
+
+
+#sidebar{
+    grid-area: sidebar;
+    height: 100%;
+    background-color: #111827;
+    color: white;
+}
+
+.main-container{
+    grid-area: main;
+    background-color: #e5e7eb;
+    overflow-y: hidden;
+    height: 100vh !important ;
+    padding: 0;
+}
+
+.sidebar-title{
+    font-family: 'Cormorant', serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 25px 25px 25px;
+    margin-bottom: 10px;
+    
+}
+
+.sidebar-logo{
+    margin-top: 10px ;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.sidebar-list{
+    font-family: 'Cormorant', serif;
+    font-size: 20px;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+.list-group-item:hover{
+    background-color: rgba(255, 255, 255, 0.803);
+    cursor: pointer;
+}
+
+#overflow{
+    overflow-x: hidden;
+}
+
