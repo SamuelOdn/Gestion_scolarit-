@@ -46,15 +46,16 @@
         document.querySelector(".deleteForm").style.display="none"; 
         //alert("hello");
     }
-    function update() {
+    function update(id , name) {
         document.querySelector(".section2").style.display="block";
         document.querySelector(".updateForm").style.display="block";
         document.querySelector(".deleteForm").style.display="none";
         document.querySelector(".addForm").style.display="none";
 
-        /*document.querySelector("#id").value = id ;
+        document.querySelector("#id").value = id ;
+        
         document.querySelector("#lastName").value = lastName ;
-        document.querySelector("#firstName").value = firstName ;
+        /*document.querySelector("#firstName").value = firstName ;
         document.querySelector("#email").value = email ;
         document.querySelector("#birthday").value = birthday ;*/
       
@@ -107,7 +108,7 @@
             <td>$ligne[4]</td>
             <td>$ligne[3]</td>
             <td>         
-                <i class='fas fa-edit me-2 text-warning fa-2x' onclick='javascript:update()'></i>  
+                <i class='fas fa-edit me-2 text-warning fa-2x' onclick='javascript:update(id=".$ligne[0].",name=".$ligne[1].")'></i>  
                 <i class='fas fa-trash-alt text-danger fa-2x ' onclick='javascript:del(id=".$ligne[0].")'></i>
             </td>
         </tr>
@@ -185,7 +186,8 @@ echo $chaine;
                             <input type="date" name="Dnaissance" id="birthday" class="form-control form-control-lg" />
                             <label class="form-label" for="form3Example4cg">Date de naissance</label>
                         </div>
-                            <input type="hidden" name="id" id="id" class="form-control form-control-lg" />
+
+                        <input type="text" name="id" id="id" class="form-control form-control-lg" />
 
                         <div class="d-flex align-items-center justify-content-center">
                             <a class="btn btn-warning mb-0 me-2" role="button" href=""> Annuler</a>
@@ -194,8 +196,8 @@ echo $chaine;
 
                   </form>
 
-                    <form class="deleteForm" action="deleteUser.php" method="POST">
-                                <input type="hidden" name="id" id="currentId" class="form-control form-control-lg" value="" />
+                    <form class="deleteForm" action="deleteUser.php" method="POST" style="padding:5rem 0" >
+                            <input type="hidden" name="id" id="currentId" class="form-control form-control-lg" value="" />
                                 
                             <div class="form-outline mb-2">
                                 <h4><i class="fas fa-ban fa-fw text-danger "></i> Êtes-vous sûr de vouloir supprimer ?</h4>

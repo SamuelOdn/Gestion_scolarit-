@@ -1,27 +1,24 @@
-const TabsBtn = document.querySelector(".dashboard");
-const FormBtn = document.querySelector(".payer");
-let ButtonView =  [TabsBtn, FormBtn]
+// SIDEBAR TOGGLE
 
-const Tabs = document.querySelectorAll(".dashboard")[1];
-const Form = document.querySelectorAll(".payer")[1];
-let Views = [Tabs, Form]
+var sidebarOpen = false;
+var sidebar = document.getElementById("sidebar");
 
+function openSidebar() {
+  if(!sidebarOpen) {
+    sidebar.classList.add("sidebar-responsive");
+    sidebarOpen = true;
+  }
+}
 
-ButtonView.forEach((btn)=>{
-    btn.addEventListener("click", (e)=>{
-        ButtonView.forEach((myBtn)=>{
-            myBtn.style.backgroundColor="#111827"
-            myBtn.style.color="#495057"
-        })
-        btn.style.backgroundColor="#007bff"
-        btn.style.color="#fff"
-        Views.forEach((view)=>{
-            if(view)
-            if(view.classList.contains(btn.classList[0])){
-                view.style.display="block"
-            }else{
-                view.style.display="none"
-            }
-        })
-    })
-})
+function closeSidebar() {
+  if(sidebarOpen) {
+    sidebar.classList.remove("sidebar-responsive");
+    sidebarOpen = false;
+  }
+}
+
+//document.body.addEventListener("scroll", ()=>{
+    //if(sidebar.classList.contains("sidebar-responsive")){
+       // closeSidebar()
+    //}
+//})

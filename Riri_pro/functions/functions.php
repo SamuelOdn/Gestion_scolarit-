@@ -166,7 +166,7 @@ function pay ($libelle , $montantRestant , $montantTotal , $montantAPayer , $dat
 }
 
 function image(){
-    return '<img src="../images/welcome.jpg" height="90%" width="100%" alt="Welcome image" />';
+    return '<img src="../images/rii.jpg" height="90%" width="100%" alt="Welcome image" />';
   }
 
 ?>

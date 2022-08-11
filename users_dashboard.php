@@ -17,12 +17,16 @@
         <title>userDasboard</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
-        <?php include_once("utils.php") ?>   
+        <?php include_once("utils.php") ?> 
+        <link rel="stylesheet" href="css/styles.css">  
     </head>
     <body>
         <div class="grid-container">
             <!--Header-->
             <header style="padding: 0 2%;" class="header">
+                <div class="menu-icon" onclick="openSidebar()">
+                    <span><i class="fas fa-bars fa-fw fa-2x"></i></span>
+                </div>
                 <div class="header-left">
                     <div class="input-group mt-3">
                         <div class="form-outline">
@@ -53,10 +57,11 @@
 
             <!--Sidebar-->
             <aside id="sidebar">
-                <div style="height:8%;display:flex;justify-content:center;align-items:center" class="sidebar-title">
+                <div class="sidebar-title">
                     <div class="sidebar-logo">
                         <span class="brand"><i class="fas fa-signature fa-2x text-light"></i>RITA</span>
                     </div>
+                    <span onclick="closeSidebar()"><i class="fas fa-times fa-fw fa-2x"></i></span>
                 </div>
 
                 <div class="sidebar-list">
@@ -107,7 +112,7 @@
 
         <!-- MDB -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
-        <!--script src="js/index.js"></script-->
+        <script src="js/index.js"></script>
     </body>
 </html>
 
